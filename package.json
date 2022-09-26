@@ -3,13 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@headlessui/react": "^1.7.2",
+    "@heroicons/react": "^2.0.11",
+    "@react-google-maps/api": "^2.13.1",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.27.2",
+    "classnames": "^2.3.2",
+    "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-geocode": "^0.2.3",
+    "react-hook-form": "^7.36.1",
     "react-scripts": "5.0.1",
-    "web-vitals": "^2.1.4"
+    "react-time-picker": "^5.0.0",
+    "react-toastify": "^9.0.8",
+    "web-vitals": "^2.1.4",
+    "zustand": "^4.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -34,5 +45,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.12",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
   }
 }
