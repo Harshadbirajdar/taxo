@@ -8,6 +8,7 @@ import BookSkelton from "./BookSkelton";
 import mini from "../assets/mini.webp";
 import Premier from "../assets/Premier.webp";
 import Delux from "../assets/Delux.webp";
+import { toast } from "react-toastify";
 const Book = () => {
   const data = [
     {
@@ -70,6 +71,12 @@ const Book = () => {
     let price = route.toll + discountedPrice + discountedPrice * 0.3;
     return { discountedPrice, price };
   };
+
+  const onBookClick = () => {
+    toast.success(`${data[selected].title} booked successfully`);
+    setStep("Form");
+    setDirection(undefined);
+  };
   if (current === "Book") {
     return (
       <div className="absolute top-24 left-7 bg-white rounded-lg p-5">
@@ -87,7 +94,6 @@ const Book = () => {
                 onClick={() => {
                   setStep("Form");
                   setDirection(undefined);
-                  setMap(null);
                 }}
                 className="w-7 mb-2 cursor-pointer "
               />
@@ -149,7 +155,11 @@ const Book = () => {
               </div>
             ))}
             <div>
-              <Button className="w-full mx-3" disabled={selected === null}>
+              <Button
+                onClick={onBookClick}
+                className="w-full mx-3"
+                disabled={selected === null}
+              >
                 Book {selected !== null ? data[selected].title : "Any"}
               </Button>
             </div>
