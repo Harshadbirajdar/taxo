@@ -38,7 +38,6 @@ function App() {
               fullscreenControl: false,
             }}
           >
-            <Marker position={center} />
             {direction && <DirectionsRenderer directions={direction} />}
           </GoogleMap>
         </div>

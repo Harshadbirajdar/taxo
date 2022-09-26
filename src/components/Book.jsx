@@ -85,7 +85,7 @@ const Book = () => {
             <div className="flex ">
               <ArrowLeftCircleIcon
                 onClick={() => {
-                  setStep("form");
+                  setStep("Form");
                   setDirection(undefined);
                   setMap(null);
                 }}
